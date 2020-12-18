@@ -12,7 +12,7 @@ public class PsquareSpringbootServiceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PsquareSpringbootServiceApplication.class, args);
 	}
-	
+
 	@RequestMapping("/sayhello")
 	public String sayHello() {
 		return "hello from springboot!";
