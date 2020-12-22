@@ -1,4 +1,4 @@
-package edu.daemondev.service.modelRepository;
+package edu.daemondev.psquare.models;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @IdClass(NotesData.class)
 public class NotesData implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -5279187325348359077L;
 
     @Id
     @Column(name = "userid", nullable = false)

@@ -1,4 +1,4 @@
-package edu.daemondev.service;
+package edu.daemondev.psquare;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

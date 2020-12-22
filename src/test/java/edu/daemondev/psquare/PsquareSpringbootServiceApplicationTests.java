@@ -1,4 +1,4 @@
-package edu.daemondev.service;
+package edu.daemondev.psquare;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
