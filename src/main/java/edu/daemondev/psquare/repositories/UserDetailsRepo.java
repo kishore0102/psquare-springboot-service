@@ -1,6 +1,5 @@
 package edu.daemondev.psquare.repositories;
 
-import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -33,11 +32,19 @@ public interface UserDetailsRepo extends CrudRepository<UserDetails, Long> {
     int updateOTPByEmail(String email, String otp, Timestamp otpts);
 
     @Modifying
+    @Query(value = "update user_details set otp = null, otpts = null, otpvalidator = 0 where email = ?1", nativeQuery = true)
+    int resetOTPByEmail(String email);
+
+    @Modifying
     @Query(value = "update user_details set lockcount = lockcount + 1 where email = ?1", nativeQuery = true)
     int incrementUserLock(String email);
 
     @Modifying
+    @Query(value = "update user_details set lockcount = 0 where email = ?1", nativeQuery = true)
+    int resetUserLock(String email);
+
+    @Modifying
     @Query(value = "update user_details set status = ?2 where email = ?1", nativeQuery = true)
-    int activateUserOTPBased(String email, char status);
+    int updateStatusByEmail(String email, char status);
 
 }

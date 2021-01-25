@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Bean;
 public class PsquareSpringbootServiceApplication {
 
 	public static void main(String[] args) {
+		System.out.println("PSQUARE_DATABASE_URL - " + System.getenv("PSQUARE_DATABASE_URL"));
 		SpringApplication.run(PsquareSpringbootServiceApplication.class, args);
 	}
 
@@ -18,6 +19,7 @@ public class PsquareSpringbootServiceApplication {
 		AuthFilter authFilter = new AuthFilter();
 		registrationBean.setFilter(authFilter);
 		registrationBean.addUrlPatterns("/api/notes/*");
+		registrationBean.addUrlPatterns("/api/user/changePassword");
 		return registrationBean;
 	}
 

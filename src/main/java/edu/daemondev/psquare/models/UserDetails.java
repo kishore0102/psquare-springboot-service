@@ -34,7 +34,7 @@ public class UserDetails implements Serializable {
     private String passhash;
 
     @Column(name = "lockcount", nullable = false)
-    private String lockcount;
+    private int lockcount;
 
     @Column(name = "otp", nullable = true)
     private String otp;
@@ -104,11 +104,11 @@ public class UserDetails implements Serializable {
         this.passhash = passhash;
     }
 
-    public String getLockcount() {
+    public int getLockcount() {
         return lockcount;
     }
 
-    public void setLockcount(String lockcount) {
+    public void setLockcount(int lockcount) {
         this.lockcount = lockcount;
     }
 
