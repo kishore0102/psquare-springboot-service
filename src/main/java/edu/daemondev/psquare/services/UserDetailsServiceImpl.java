@@ -147,7 +147,7 @@ public class UserDetailsServiceImpl {
                 }
             });
             Message msg = new MimeMessage(session);
-            msg.setFrom(new InternetAddress("tekbus29@gmail.com", false));
+            msg.setFrom(new InternetAddress(Constants.SENDER_MAIL_ID, false));
             msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(user.getEmail()));
             msg.setSubject("Psquare activation");
             msg.setContent("Psquare activation - valid for 10 mins only", "text/html");

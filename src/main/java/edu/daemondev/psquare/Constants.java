@@ -7,9 +7,10 @@ public class Constants {
     public static final String JWT_TOKEN_SECRET_KEY = "PsquareJWTsecretAPIkey";
     public static final int JWT_TOKEN_VALIDITY = 2 * 60 * 60 * 1000;
 
-    public static final String OTP_EMAIL = "71801f0d1cff5c12c9c62cb50b3c3244";
-    public static final String OTP_PWD = "9c27668b5c75028c61e1f35fddaf4a01";
-    public static final String MAIL_HOST = "in-v3.mailjet.com";
+    public static final String OTP_EMAIL = System.getenv("OTP_EMAIL");
+    public static final String OTP_PWD = System.getenv("OTP_PWD");
+    public static final String MAIL_HOST = System.getenv("MAIL_HOST");
+    public static final String SENDER_MAIL_ID = System.getenv("SENDER_MAIL_ID");
 
     public static final String emailValidationRegex = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
     public static final Pattern emailValidationPattern = Pattern.compile(emailValidationRegex);

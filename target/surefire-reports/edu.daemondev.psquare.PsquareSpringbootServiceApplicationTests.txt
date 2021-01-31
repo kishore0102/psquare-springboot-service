@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: edu.daemondev.psquare.PsquareSpringbootServiceApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.158 s - in edu.daemondev.psquare.PsquareSpringbootServiceApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.473 s - in edu.daemondev.psquare.PsquareSpringbootServiceApplicationTests

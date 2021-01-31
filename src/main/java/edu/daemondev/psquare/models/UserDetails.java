@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Table(name = "user_details")
 public class UserDetails implements Serializable {
 
-    private static final long serialVersionUID = 2192318323225072967L;
+    private static final long serialVersionUID = 1L;
 
     @Id
     @Column(name = "userid", nullable = false)

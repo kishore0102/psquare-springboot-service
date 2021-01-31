@@ -53,7 +53,6 @@ public class NotesDataServiceImpl {
     public String deleteNotes(String userid, int seqnbr) throws PsquareNotFoundException {
         int notes = notesDataRepo.countNotesByUseridAndSeqnbr(userid, seqnbr);
         if (notes == 0) {
-
             throw new PsquareNotFoundException("Note is not available for delete");
         }
         try {

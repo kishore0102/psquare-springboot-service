@@ -1,7 +1,6 @@
 package edu.daemondev.psquare;
 
 import java.io.IOException;
-import java.util.Arrays;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;

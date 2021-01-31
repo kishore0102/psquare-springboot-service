@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import edu.daemondev.psquare.services.NotesDataServiceImpl;
@@ -28,11 +27,11 @@ public class NotesDataController {
         return ResponseEntity.ok(notesDataService.getNotesByUserid(tokenuserid));
     }
 
-    @RequestMapping(method = RequestMethod.OPTIONS, value = "/getNotes")
-    public ResponseEntity<?> getNotesOptions(HttpServletRequest request) {
-        System.out.println("request came here to options controller");
-        return ResponseEntity.ok(null);
-    }
+    // @RequestMapping(method = RequestMethod.OPTIONS, value = "/getNotes")
+    // public ResponseEntity<?> getNotesOptions(HttpServletRequest request) {
+    // System.out.println("request came here to options controller");
+    // return ResponseEntity.ok(null);
+    // }
 
     @PostMapping("/addNotes")
     public ResponseEntity<?> addNotesForUser(HttpServletRequest request, @RequestBody Map<String, Object> notes) {
