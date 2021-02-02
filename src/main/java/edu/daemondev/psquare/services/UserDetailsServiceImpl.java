@@ -136,6 +136,11 @@ public class UserDetailsServiceImpl {
         int otp = ThreadLocalRandom.current().nextInt(100000, 999999);
         String otpvalue = String.valueOf(otp);
         try {
+            System.out.println("Constants.SENDER_MAIL_ID" + Constants.SENDER_MAIL_ID);
+            System.out.println("Constants.MAIL_HOST" + Constants.MAIL_HOST);
+            System.out.println("Constants.OTP_EMAIL" + Constants.OTP_EMAIL);
+            System.out.println("Constants.OTP_PWD" + Constants.OTP_PWD);
+
             Properties props = new Properties();
             props.put("mail.smtp.auth", "true");
             props.put("mail.smtp.starttls.enable", "true");
@@ -159,7 +164,8 @@ public class UserDetailsServiceImpl {
             user.setOtpvalidator(0);
             userDetailsRepo.save(user);
         } catch (Exception err) {
-            System.out.println("Exception while sending otp - " + err);
+            System.out.println("Exception while sending otp - ");
+            System.out.println(err);
             throw new PsquareAuthException("Unexpected error while sending OTP, please try again later.");
         }
     }

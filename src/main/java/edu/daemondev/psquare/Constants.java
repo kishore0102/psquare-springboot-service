@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 public class Constants {
 
-    public static final String JWT_TOKEN_SECRET_KEY = "PsquareJWTsecretAPIkey";
+    public static final String JWT_TOKEN_SECRET_KEY = System.getenv("JWT_TOKEN_SECRET_KEY");
     public static final int JWT_TOKEN_VALIDITY = 2 * 60 * 60 * 1000;
 
     public static final String OTP_EMAIL = System.getenv("OTP_EMAIL");

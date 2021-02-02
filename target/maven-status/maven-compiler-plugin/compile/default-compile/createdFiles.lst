@@ -1,6 +1,0 @@
-edu\daemondev\psquare\services\NotesDataServiceImpl.class
-edu\daemondev\psquare\controllers\NotesDataController.class
-edu\daemondev\psquare\PsquareSpringbootServiceApplication.class
-edu\daemondev\psquare\repositories\NotesDataRepo.class
-edu\daemondev\psquare\models\NotesData.class
-edu\daemondev\psquare\ServletInitializer.class
